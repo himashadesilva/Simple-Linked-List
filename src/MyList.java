@@ -1,14 +1,16 @@
 /**
  * Created by Himasha De Silva on 3/2/2017.
  */
-//import java.util.NoSuchElementException;
 
 public class MyList<T> {
 
     private Node head; // the first element
-
     private Node tail; // the last element
+    private int size; //size of list
 
+    public MyList(){
+        this.size=0;
+    }
 
     private class Node {
 
@@ -37,7 +39,7 @@ public class MyList<T> {
             tail.next = new Node(t);
             tail = tail.next;
         }
-
+        size++;
     }
 
     public boolean isEmpty(){
@@ -45,6 +47,8 @@ public class MyList<T> {
         return head == null;
     }
 
-
+    public void print(){
+        System.out.println(head.next.elem);
+    }
 
 }
