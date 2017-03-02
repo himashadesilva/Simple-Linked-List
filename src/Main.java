@@ -25,8 +25,28 @@ public class Main {
 
         System.out.println(linkedlist.remove()+" (should print 72)");
         System.out.println(linkedlist.remove()+" (should print 80)");
+        System.out.println();
 
+//=================================================================================
+        MyList<String> linkedlist2 = new MyList<String>();
 
+        System.out.println(linkedlist2.isEmpty()+" (should print true)");
+        System.out.println(linkedlist2.hasElements()+" (should print false)");
+
+        linkedlist2.add("abc");
+        System.out.println(linkedlist2.remove()+" (should print abc)");
+        System.out.println(linkedlist2.remove()+" (should print null - no elements to remove)");
+
+        linkedlist2.add("himasha");
+        linkedlist2.add("shehan");
+        linkedlist2.add("deSilva");
+        System.out.println(linkedlist2.remove()+" (should print himasha)");
+
+        System.out.println(linkedlist2.isEmpty()+" (should print false - list is not empty)");
+        System.out.println(linkedlist2.hasElements()+" (should print true - list has elements)");
+
+        System.out.println(linkedlist2.remove()+" (should print shehan)");
+        System.out.println(linkedlist2.remove()+" (should print deSilva)");
 
     }
 
