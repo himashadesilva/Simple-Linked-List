@@ -47,8 +47,21 @@ public class MyList<T> {
         return head == null;
     }
 
-    public void print(){
-        System.out.println(head.next.elem);
+    public boolean hasElements(){
+        return head!=null;
+    }
+
+    public T remove(){
+
+        Node temp = new Node(null, head);
+        temp = head;
+        if(size==0)
+            return null;
+        else {
+            head = head.next;
+            size--;
+            return temp.elem;
+        }
     }
 
 }
